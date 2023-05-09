@@ -1,0 +1,40 @@
+﻿<Window x:Class="USDAE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:USDAE"
+        mc:Ignorable="d"
+        Title="USDAH" Height="450" Width="1366" Background="Black">
+    <Grid Height="NaN" Margin="0,0,0,-6">
+        <CheckBox x:Name="albedo" Content="Albedo" HorizontalAlignment="Left" Margin="38,86,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Bahnschrift SemiCondensed" FontSize="16" Checked="albedo_Checked"/>
+        <CheckBox x:Name="normal" Content="Normal" HorizontalAlignment="Left" Margin="115,86,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Bahnschrift SemiCondensed" FontSize="16" Checked="normal_Checked"/>
+        <CheckBox x:Name="roughness" Content="Roughness" HorizontalAlignment="Left" Margin="193,86,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Bahnschrift SemiCondensed" FontSize="16" Checked="roughness_Checked"/>
+        <CheckBox x:Name="metallic" Content="Metalness" HorizontalAlignment="Left" Margin="291,86,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Bahnschrift SemiCondensed" FontSize="16" IsChecked="False" Checked="metallic_Checked"/>
+        <CheckBox x:Name="emission" Content="Emission" HorizontalAlignment="Left" Margin="389,86,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Foreground="White" FontFamily="Bahnschrift SemiCondensed" FontSize="16"/>
+        <TextBox x:Name="USDAText" HorizontalAlignment="Left" Margin="38,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="427" Height="303" SelectionTextBrush="#FF659C4D" Foreground="#FF2DA40D" Background="Black" FontFamily="Cascadia Code SemiBold" IsReadOnlyCaretVisible="True" BorderBrush="White"/>
+        <TextBox x:Name="matid" HorizontalAlignment="Left" Margin="38,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Foreground="White" Background="Black" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="tex" HorizontalAlignment="Left" Margin="38,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Foreground="White" Background="Black" TextChanged="tex_TextChanged"/>
+        <Label Content="Textures Prefix and path in mod folder" HorizontalAlignment="Left" Margin="33,35,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Variable Display Semibold"/>
+        <Label Content="Material ID" HorizontalAlignment="Left" Margin="184,14,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Variable Display Semibold"/>
+        <Label Content="PNG TO DDS" HorizontalAlignment="Left" Margin="515,115,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="48"/>
+        <TextBox x:Name="PNG" HorizontalAlignment="Left" Margin="526,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" Height="15" TextChanged="TextBox_TextChanged_1"/>
+        <Label Content="PNG Name" HorizontalAlignment="Left" Margin="677,174,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.456,3.522"/>
+        <TextBlock x:Name="command" HorizontalAlignment="Left" Margin="526,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Height="15" Foreground="White" Text="COMMAND" FontWeight="Bold" FontFamily="Bahnschrift SemiLight"/>
+        <CheckBox x:Name="Encoding" Content="Tangent Space(DX, if not - Octathedral)" HorizontalAlignment="Left" Margin="291,64,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Bahnschrift SemiBold Condensed" Checked="Encoding_Checked"/>
+        <TextBlock HorizontalAlignment="Left" Margin="819,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="30" Foreground="White" FontWeight="Bold" FontFamily="Bahnschrift SemiLight" Text="Author's Tips:" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="819,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="427" Height="95" Foreground="#FF717171" FontWeight="Bold" FontFamily="Bahnschrift SemiLight" FontSize="14"><Run Foreground="Maroon" FontSize="16" Text="1.To convert image to dds put your texture or folder only with textures on NVIDIA Texture Tools\\nvbatchcompress.exe"/><LineBreak/><Run Foreground="Maroon" FontSize="16" Text="2. To convert dds to png run PNG TO DDS command in Nvidia Texture Tools folder"/></TextBlock>
+        <TextBox x:Name="intense" HorizontalAlignment="Left" Margin="291,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White" TextChanged="intense_TextChanged"/>
+        <Label Content="Emission Intensity" HorizontalAlignment="Left" Margin="291,6,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Variable Display Semibold"/>
+        <Label Content="To support Author:" HorizontalAlignment="Right" Margin="843,8,0,0" VerticalAlignment="Top" Background="Black" Foreground="#FFA3F363" FontFamily="Bahnschrift SemiBold Condensed"/>
+        <TextBlock HorizontalAlignment="Right" Margin="850,29,0,0" TextWrapping="Wrap" Text="You can subscribe to my channel by this link: https://youtube.com/@vovanchogoodgames" VerticalAlignment="Top" Foreground="White" Width="177" FontFamily="Bahnschrift SemiCondensed" Height="26" FontSize="10"/>
+        <Label Content="Author: Vovancho#1616" HorizontalAlignment="Right" Margin="0,0,0,7" VerticalAlignment="Bottom" Foreground="#FFEFEDED" FontFamily="Bahnschrift SemiBold SemiCondensed"/>
+        <Label Content="Models USDA" HorizontalAlignment="Left" Margin="819,7,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="48"/>
+        <TextBox x:Name="meshid" HorizontalAlignment="Left" Margin="819,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Foreground="White" Background="Black" TextChanged="MeshID_TextChanged"/>
+        <Label Content="Mesh ID" HorizontalAlignment="Left" Margin="970,112,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Variable Display Semibold"/>
+        <TextBox x:Name="USDAModelText" HorizontalAlignment="Left" Margin="819,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Height="143" SelectionTextBrush="#FF659C4D" Foreground="#FF2DA40D" Background="Black" FontFamily="Cascadia Code SemiBold" IsReadOnlyCaretVisible="True" BorderBrush="White"/>
+        <TextBox x:Name="mesh_path" HorizontalAlignment="Left" Margin="819,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303" Foreground="White" Background="Black" TextChanged="MeshPath_TextChanged"/>
+        <Label Content="Mesh path in mod folder" HorizontalAlignment="Left" Margin="1136,79,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Variable Display Semibold"/>
+        <Label Content="Materials USDA" HorizontalAlignment="Left" Margin="484,339,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="48"/>
+    </Grid>
+</Window>
